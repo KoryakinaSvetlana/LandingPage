@@ -1,0 +1,676 @@
+@font-face {
+  font-family: "proxima_nova";
+  src: url("../fonts/mark_simonson_-_proxima_nova_regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quercus";
+  src: url("../fonts/QuercusBook.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quercus";
+  src: url("../fonts/QuercusMedium.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quercus", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #283645;
+}
+
+img {
+  max-width: 100%;
+  /*height: auto;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+
+.content-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.opening-hours-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  position: relative;
+  min-height: 500px;
+  background-image: url("../img/header_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.logo-wrapper {
+  position: fixed;
+  z-index: 2;
+  top: 10px;
+  left: 50px;
+  right: 50px;
+  text-align: center;
+}
+
+.main-navigation {
+  min-height: 70px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.main-navigation__list-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.main-navigation__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-navigation__list--collapsed {
+  display: none;
+}
+
+.main-navigation__list-item {
+  padding: 10px 0 5px 0;
+  font-family: "proxima_nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-navigation__list-item:first-of-type {
+  padding-top: 85px;
+}
+
+.main-navigation__list-item:last-of-type {
+  padding-bottom: 45px;
+}
+
+.main-navigation__list-item a {
+  color: rgb(93, 58, 65);
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  width: 25px;
+  height: 30px;
+  top: 23px;
+  left: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.about,
+.menu,
+.cuisine,
+.events,
+.news,
+.reservation,
+.contact {
+  position: relative;
+  background-color: #f6f4f4;
+  padding: 0 0 30px 0;
+}
+
+.about::after,
+.menu::after,
+.cuisine::after,
+.events::after,
+.news::after,
+.reservation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  box-shadow: 0 7px 15px 0px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  display: inline-block;
+  padding: 0 0 10px 0;
+  color: rgb(102, 61, 66);
+  font-family: "proxima_nova";
+  font-size: 24px;
+  font-style: normal;
+  font-weight:400;
+  letter-spacing: 2px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-image: url("../img/heading_bg.png");
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: 100%;
+  background-size: auto 7px;
+}
+
+section p {
+  font-family: "Quercus";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #663d42;
+  letter-spacing: 1px;
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+}
+
+.slider-button {
+  position: absolute;
+  width: 18px;
+  height: 29px;
+  top: calc(50% - 29px / 2);
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/gallery-prev.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.slider-button--next {
+  left: auto;
+  right: 10px;
+  background-image: url("../img/gallery-next.png");
+}
+
+.slider-items {
+  width: calc(9 * 100%);
+  transform: translateX(0);
+}
+
+.block-bg {
+  display: block;
+  height: 100px;
+  background-image: url("../img/44cbb10aac9ad2a955ef5be4dfd818a7.jpg");
+  background-attachment: scroll;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+}
+
+.block-bg:nth-of-type(2) {
+  background-image: url("../img/d11716c8f16058fe17cb94afd776cace.jpg");
+}
+
+.block-bg:nth-of-type(3) {
+  background-image: url("../img/e4446bba60fe767cdaea6ab827cbcce1.jpg");
+}
+
+.block-bg:nth-of-type(4) {
+  background-image: url("../img/46583ee5d5d03ffaee672d9b7a3dd40e.jpg");
+}
+
+.block-bg:nth-of-type(5) {
+  background-image: url("../img/3a1cda88a1fbb0edd2311173f23810b9.jpg");
+}
+
+.block-bg:nth-of-type(6) {
+  background-image: url("../img/6de51ae4404702716588cf4ff0962fcd.jpg");
+}
+
+.menu__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu__item a {
+  display: flex;
+  color: #5d3a41;
+  font-family: "Quercus";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.menu__item img {
+  height: 40px;
+}
+
+.menu__item span {
+  line-height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+.news .container,
+.reservation .container {
+  text-align: center;
+}
+
+.news__items {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.news__item {
+  width: 260px;
+  margin: 0 7px 30px;
+  color: #663d42;
+  text-align: left;
+}
+
+.news__item h3 {
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.news__item time {
+  display: block;
+  margin: 10px 0 10px 0;
+  font-size: 20px;
+  text-align: left;
+}
+
+.news__item p {
+  line-height: 140%;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.news__more {
+  font-family: proxima_nova;
+  text-align: center;
+  font-size: 24px;
+  color: #663d42;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.reservation p {
+  text-align: left;
+}
+
+.reservation__form {
+  display: block;
+  text-align: left;
+}
+
+.reservation__form-item {
+  padding: 5px 0 5px 0;
+}
+
+.reservation__form-item label {
+  display: block;
+  color: rgb(93, 58, 65);
+  font-family: "proxima_nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.reservation__form-item .reservation__mailing {
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: normal;
+}
+
+.reservation__form-item input[type="text"],
+.reservation__form-item input[type="email"],
+.reservation__form-item input[type="tel"],
+.reservation__form-item textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 30px;
+  border: 1px solid #5d3a41;
+  background: 0 0;
+  padding: 0 10px;
+  color: #5d3a41;
+  font-size: 12px;
+  border-radius: 0;
+}
+
+.reservation__form-item textarea {
+  height: 105px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.reservation__form-item input[type="submit"],
+.page-footer__book-btn {
+  height: 31px;
+  display: inline-block;
+  font-family: "proxima_nova";
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #5d3a41;
+  padding: 0 28px;
+  line-height: 30px;
+  border-radius: 0;
+  border: none;
+}
+
+.contact h3 {
+  font-family: "Quercus";
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #663d42;
+}
+
+.contact__map {
+  width: 100%
+}
+
+.contact__map iframe {
+  width: 100%;
+  height: 420px;
+  border: 2px solid #5d3a41;
+}
+
+.page-footer {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-top: 2px solid #5d3a41;
+  background-color: #f6f4f4;
+  text-align: center;
+}
+
+address {
+  padding-bottom: 20px;
+  font-family: "Quercus";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 38px;
+  letter-spacing: 1px;
+  line-height: 19.6px;
+  color: rgb(102, 61, 66);
+}
+
+.social {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.social li {
+  margin-left: 5px;
+}
+
+.email-and-social-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 10px 0;
+}
+
+.footer__contact-icon {
+  display: block;
+  width: 29px;
+  height: 31px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.footer__contact-icon--mail {
+  background-image: url("../img/footer-icon-mail.png");
+}
+
+.footer__contact-icon--fb {
+  background-image: url("../img/footer-icon-fb.png");
+}
+
+.footer__contact-icon--instagram {
+  background-image: url("../img/footer-icon-ig.png");
+}
+
+.footer__contact-icon--vk {
+  background-image: url("../img/footer-icon-ta.png");
+}
+
+@media (min-width: 600px) {
+  .logo img {
+    width: 140px;
+    height: 60px;
+  }
+
+  .reservation__form-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .reservation__form-item label {
+    width: 30%;
+    padding-left: 20px;
+  }
+
+  .reservation__form-item .reservation__mailing {
+    width: auto;
+  }
+}
+
+@media (min-width: 980px) {
+  .container {
+    padding: 0 30px 0 30px;
+  }
+
+  .page-header {
+      min-height: 700px;
+    }
+
+  .logo {
+    margin-left: 30px;
+  }
+
+  .logo img {
+    width: 197px;
+    height: 188px;
+  }
+
+  .main-navigation {
+    min-height: 212px;
+  }
+
+  .main-navigation--mini {
+    min-height: 115px;
+  }
+
+  .logo--mini {
+    display: inline-block;
+    width: 197px;
+    height: 105px;
+    background-image: url("../img/logo.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 10px center;
+    background-size: contain;
+  }
+
+  .logo--mini img {
+    display: none;
+  }
+
+  .main-navigation--mini .main-navigation__list-item:first-of-type,
+  .main-navigation--mini .main-navigation__list-item:last-of-type {
+    padding-top: 65px;
+  }
+
+  .main-navigation--mini .main-navigation__list-item {
+    padding-top: 65px;
+  }
+
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__list--collapsed {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-navigation__list-item:first-of-type,
+  .main-navigation__list-item:last-of-type {
+    padding-top: 165px;
+    padding-bottom: 0;
+  }
+
+  .main-navigation__list-item {
+    padding-top: 165px;
+    margin-right: 20px;
+  }
+
+  .main-navigation__list-item:nth-of-type(4) {
+    margin-right: 270px;
+  }
+
+  .logo-wrapper {
+    top: 10px;
+    left: 50%;
+    width: 197px;
+    transform: translateX(-50%);
+  }
+
+  .content-wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .contact {
+    padding-bottom: 155px;
+  }
+
+  .page-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+  }
+
+  .page-footer .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  address {
+    text-align: left;
+    padding-top: 25px;
+    width: 40%;
+  }
+
+  .email-and-social-wrapper {
+    padding-top: 30px;
+    width: 40%;
+    justify-content: flex-end;
+  }
+
+  .page-footer__book-btn {
+    margin-top: 30px;
+  }
+
+  section h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .menu__item a {
+    font-size: 26px;
+  }
+
+  .block-bg {
+    height: 400px;
+    background-attachment: fixed;
+  }
+
+  .about__content,
+  .cuisine__content,
+  .events__content,
+  .opening-hours-wrapper {
+      width: 30%;
+  }
+
+  .slider,
+  .contact__map {
+    margin-top: 20px;
+    margin-left: 50px;
+    height: auto;
+    width: 70%;
+    /*background-color: green;*/
+  }
+
+  .slider-items {
+    height: 100%;
+  }
+
+  .slider-items img {
+    height: 100%;
+  }
+}
